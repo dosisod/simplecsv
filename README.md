@@ -3,9 +3,9 @@
 Easily manipulate csv files using python
 
 ```python
-import simplecsv
+import simplecsv as ss
 
-sc=simplescv("file.csv")
+sc=s.simplecsv("file.csv")
 sc.writerow(["ID","NAME","INFO"])
 sc.writerows(data)
 sc.close()
