@@ -4,7 +4,7 @@ class simplecsv:
 	def __init__(self, file, mode="a+"): #must specify file path
 		self.table=[]
 		self.f=open(file, mode)
-		self.csvr=csv.reader(self.f.read())
+		self.csvr=csv.reader(self.f)
 		self.csvw=csv.writer(self.f)
 		for row in self.csvr:
 			self.table.append(row)
