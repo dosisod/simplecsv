@@ -1,11 +1,11 @@
 import csv
 
 class simplecsv:
-	def __init__(self, file, mode="a+"): #must specify file path
+	def __init__(self, file, mode="a+", delim=","): #must specify file path
 		self.table=[]
 		self.f=open(file, mode)
-		self.csvr=csv.reader(self.f)
-		self.csvw=csv.writer(self.f)
+		self.csvr=csv.reader(self.f, delimiter=delim)
+		self.csvw=csv.writer(self.f, delimiter=delim)
 		for row in self.csvr:
 			self.table.append(row)
 
